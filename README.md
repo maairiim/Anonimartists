@@ -1,5 +1,8 @@
 # Anonimartists
 
+This is our Trello board: https://trello.com/b/op8jBg5G/ideas
+and Google drive: https://drive.google.com/file/d/1XNaFwDyvKik3xOGbnBinXSxqJe0St4YW/view?usp=sharing
+
 ## 23:00 del 31/05/2020
 > se sube el commit final de la primera versión.
 
