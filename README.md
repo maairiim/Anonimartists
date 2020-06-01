@@ -1,5 +1,8 @@
 # Anonimartists
 
+## 23:00 del 31/05/2020
+> se sube el commit final de la primera versión.
+
 ## 22:00 hs
 > Se sube el esqueleto de con pagina de muestra
 
