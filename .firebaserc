@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "anonimartists"
+  },
+  "targets": {
+    "anonimartists": {
+      "hosting": {
+        "Anonimartists": [
+          "anonimartists"
+        ]
+      }
+    }
   }
 }

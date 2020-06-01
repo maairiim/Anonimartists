@@ -1,4 +1,7 @@
+import { formatDate } from '@angular/common';
 import { Component } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { ApodService } from './services/apod.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Anonimartists';
+  
+  private date = '';
+  public imageToDay;
+  
+  constructor( private apodService: ApodService ){
+    this.date = formatDate(new Date(), 'yyyy-MM-dd', 'en');
+  
+    this.apodService.getImage(this.date).pipe(
+      map( (a:any) => this.imageToDay = a.hdurl)
+    ).subscribe();
+  }
+ 
 }

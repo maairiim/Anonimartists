@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col">
+        <h3 class="text-center">My Images</h3>
+    </div>
+</div>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="row">
+        <div class="col-8">
+            <div class="form-group">
+                <input (click)="clear()" type="text" class="form-control" id="termino" name="termino" [(ngModel)]="termino" placeholder="Enter your search..">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success">Search</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="row" *ngFor="let image of images">
+    <div class="col">
+        <img src={{image}} alt="..." class="img-thumbnail">
+    </div>
+</div>

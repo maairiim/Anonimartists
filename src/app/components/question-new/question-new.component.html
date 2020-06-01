@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col">
+        <h3 class="text-center">New Question</h3>
+    </div>
+</div>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="question">
+                    <h6><strong>Question*</strong></h6>
+                </label>
+                <input [(ngModel)]="question.question" type="text" name="question" id="question" class="form-control" required minlength="2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="answer1">
+                    <h6><strong>Answer N°:1*</strong></h6>
+                </label>
+                <input [(ngModel)]="question.answer1" type="text" name="answer1" id="answer1" class="form-control" required minlength="2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="answer2">
+                <h6><strong>Answer N°:2*</strong></h6>
+            </label>
+                <input [(ngModel)]="question.answer2" type="text" name="answer2" id="answer2" class="form-control" required minlength="2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="answer3">
+                <h6><strong>Answer N°:3*</strong></h6>
+            </label>
+                <input [(ngModel)]="question.answer3" type="text" name="answer3" id="answer3" class="form-control" required minlength="2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="answer4">
+                <h6><strong>Answer N°:4*</strong></h6>
+            </label>
+                <input [(ngModel)]="question.answer4" type="text" name="answer4" id="answer4" class="form-control" required minlength="2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success btn-block">Create</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-danger btn-block">Reset</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<hr>
+
+<div *ngFor="let question of questions">
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">{{question.question}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{question.answer1}}</h5>
+            <h5 class="card-title">{{question.answer2}}</h5>
+            <h5 class="card-title">{{question.answer3}}</h5>
+            <h5 class="card-title">{{question.answer4}}</h5>
+            <button class="btn btn-danger" (click)="deleteQuestion(question)">Borrar</button>
+        </div>
+    </div>
+</div>
